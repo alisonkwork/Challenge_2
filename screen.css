@@ -5,6 +5,8 @@
     --secondary-text-color: #444444;
     --notes-color: #333333;
     --accent-color: #0375c7;
+    --main-font-family: "Sarabun", Helvetica, sans-serif;
+    --secondary-font-family: Helvetica, sans-serif;
 }
 
 
@@ -33,7 +35,7 @@ main {
 }
 
 h1 {
-    font-family: "Sarabun", Helvetica, sans-serif;
+    font-family: var(--main-font-family);
     color: var(--main-text-color);
     font-size: 28px;
     margin: 0px;
@@ -63,7 +65,7 @@ input[type=button] {
 }
 
 .zoomIn {
-    position: sticky;
+    position: fixed;
     top: 770px;
     left: 1330px;
     width: 35px;
@@ -71,7 +73,7 @@ input[type=button] {
 }
 
 .zoomOut {
-    position: sticky;
+    position: fixed;
     top: 770px;
     left: 1380px;
     width: 35px;
@@ -93,7 +95,7 @@ input[type=button] {
 }
 
 .key h2 {
-    font-family: "Sarabun", Helvetica, sans-serif;
+    font-family: var(--main-font-family);
     color: var(--main-text-color);
     font-size: 24px;
     margin: 0px;
@@ -106,21 +108,21 @@ input[type=button] {
     padding: 0 0 0 40px;
     height: 30px;
     width: 200px;
-    font-family: "Helvetica", sans-serif;
+    font-family: var(--secondary-font-family);
     font-size: 16px;
     color: var(--secondary-text-color);
     margin-top: 10px;
     font-weight: bold;
 }
 
-.key ul li.lowSeverity {
+.key ul li.low {
     background: url("LowSeverity.png") no-repeat;
     background-size: 30px;
     position: absolute;
     left: 15px;
 }
 
-.key ul li.medSeverity {
+.key ul li.med {
     background: url("MediumSeverity.png") no-repeat;
     background-size: 30px;
     position: absolute;
@@ -128,7 +130,7 @@ input[type=button] {
     top: 100px;
 }
 
-.key ul li.highSeverity {
+.key ul li.high {
     background: url("HighSeverity.png") no-repeat;
     background-size: 30px;
     position: absolute;
@@ -143,3 +145,121 @@ input[type=button] {
     left: 15px;
     top: 200px;
 }
+
+.highSeverity {
+    width: 100px;
+    height: 100px;
+    border-radius: 60px;
+    background-color: rgba(221, 22, 22, .70);
+}
+
+.medSeverity {
+    width: 80px;
+    height: 80px;
+    border-radius: 60px;
+    background-color: rgba(221, 22, 22, .50);
+}
+
+.lowSeverity {
+    width: 60px;
+    height: 60px;
+    border-radius: 60px;
+    background-color: rgba(221, 22, 22, .30);
+}
+
+.notes {
+    position: absolute;
+    bottom: -100px;
+    left: 110px;
+    background: var(--notes-color);
+    border-radius: 5px;
+    width: 220px;
+    height: auto;
+    padding: 20px;
+    color: #fff;
+    opacity: 0;
+}
+
+.notes h2 {
+    font-family: var(--main-font-family);
+    font-size: 22px;
+    text-align: center;
+    margin: 0;
+}
+
+.notes h3 {
+    font-family: var(--secondary-font-family);
+    font-size: 20px;
+    text-align: left;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.notes p {
+    font-family: var(--secondary-font-family);
+    font-size: 16px;
+    text-align: left;
+    margin: 0;
+}
+
+.highSeverity:hover {
+    border: 3px solid #fff;
+}
+
+.highSeverity:hover .notes {
+    opacity: 1;
+}
+
+.medSeverity:hover {
+    border: 3px solid #fff;
+}
+
+.medSeverity:hover .notes {
+    opacity: 1;
+}
+
+.lowSeverity:hover {
+    border: 3px solid #fff;
+}
+
+.lowSeverity:hover .notes {
+    opacity: 1;
+}
+
+.house1 {
+    position: fixed;
+    left: 890px;
+    top: 300px;
+}
+
+.house2 {
+    position: fixed;
+    left: 670px;
+    top: 530px;
+}
+
+.house3 {
+    position: fixed;
+    left: 1200px;
+    top: 300px;
+}
+
+.house4 {
+    position: fixed;
+    left: 500px;
+    top: 300px;
+}
+
+.house5 {
+    position: fixed;
+    left: 60px;
+    top: 400px;
+}
+
+.house6 {
+    position: fixed;
+    left: 200px;
+    top: 80px;
+}
+
+
