@@ -215,11 +215,32 @@ input[type=button] {
     opacity: 1;
 }
 
+.damageHigh {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+}
+
+.damageMed {
+    position: absolute;
+    bottom: 25px;
+    left: 25px;
+    width: 40px;
+    height: 40px;
+}
+
+.damageLow {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 30px;
+    height: 30px;
+}
+
 .house1 {
     position: absolute;
     left: 890px;
     top: 300px;
-    background: url("Damage.png") no-repeat center;
 }
 
 .house2 {
